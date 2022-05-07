@@ -1,3 +1,3 @@
-const ALLOWED_SORTS = ["ASC", "DESC"];
+const ALLOWED_SORTS = ["DESC", "ASC"];
 
 module.exports = ALLOWED_SORTS;

@@ -22,11 +22,11 @@ const findAllPosts = async (req, res) => {
         limit = Number(limit);
         skip = Number(skip);
         const filters = q ? { $text: { $search: q } } : {};
-        sort = buildAndGetSort(sort, ALLOWED_SORTS);
+        // sort = buildAndGetSort(sort, ALLOWED_SORTS);
         filters.author = req.user.id;
 
         const posts = await Post.find()
-            .sort({ createdAt: sort })
+            .sort({ createdAt: -1 })
             .limit(limit)
             .skip(skip)
             .populate("author");

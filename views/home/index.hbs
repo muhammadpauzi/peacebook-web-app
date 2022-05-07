@@ -2,7 +2,7 @@
     <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-2">
         <div>
             {{!-- create a post --}}
-            <form id="form-create-post" class="bg-white rounded-md p-5">
+            <form id="form-create-post" class="bg-white rounded-md p-5 mb-3">
                 <h2 class="text-2xl font-black text-slate-600 mb-4 flex items-center gap-1">
                     <i class='bx bx-message-square-edit'></i> Write a Post
                 </h2>
@@ -19,6 +19,41 @@
                 </div>
             </form>
             {{!-- end create a post --}}
+
+            <div class="bg-white rounded-md p-5 mb-3">
+                <h2 class="text-2xl font-black text-slate-600 flex items-center gap-1">
+                    My Posts
+                </h2>
+            </div>
+            <div id="group-posts" class="grid grid-cols-1 gap-y-3">
+                {{!-- <div class="bg-white rounded-md px-4 py-3">
+                    <div class="pb-4 flex items-center gap-2 justify-center border-b border-b-slate-50">
+                        <div>
+                            <img src="{{ user.image }}" alt="" class="rounded-full w-10 h-10 block overflow-hidden">
+                        </div>
+                        <div class="flex-1">
+                            <h5 class="text-slate-800 font-bold">{{ user.name }}</h5>
+                            <span class="text-slate-600">{{ user.createdAt }}</span>
+                        </div>
+                    </div>
+                    <div class="py-4">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus in cupiditate blanditiis
+                            repellat incidunt id nisi omnis doloribus modi velit?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore vel deleniti, sapiente quia
+                            nemo iure corporis dolores facere aperiam neque porro quisquam rerum error facilis natus ex,
+                            dignissimos, tempora soluta.</p>
+                    </div>
+                    <div>
+                        <div x-data="{ animate: false }">
+                            <button x-on:mouseenter="animate=true" x-on:mouseleave="animate=false"
+                                class="py-2 px-5 hover:bg-slate-100 transition rounded flex items-center justify-center gap-1 font-semibold text-lg text-slate-600">
+                                <i class="bx " :class="animate ? 'bxs-like bx-tada text-red-500' : 'bx-like'"></i>
+                                <span>Like</span>
+                            </button>
+                        </div>
+                    </div>
+                </div> --}}
+            </div>
         </div>
         <div class="hidden md:block">
         </div>
