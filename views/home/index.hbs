@@ -1,10 +1,23 @@
-<div class="max-w-xl mx-auto py-5">
-    <div class="grid grid-cols-2 gap-2">
+<div class="w-full mx-auto py-5">
+    <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-2">
         <div>
-            <h1>Hello</h1>
+            {{!-- create a post --}}
+            <div class="bg-white rounded-md p-5">
+                <h2 class="text-2xl block font-black text-slate-600 mb-4">Write a Post</h2>
+                <div class="mb-3">
+                    <div id="post-editor"></div>
+                </div>
+                <div class="flex justify-end items-center">
+                    <button
+                        class="py-2 px-6 bg-[#4169e1] text-white rounded flex items-center justify-center hover:bg-[#4169e1] focus:ring-[#4169e1] focus:ring-offset-2 transition focus:ring-2 font-semibold">Send</button>
+                </div>
+            </div>
+            {{!-- end create a post --}}
         </div>
-        <div>
-            <h1>Hai</h1>
+        <div class="hidden md:block">
         </div>
     </div>
 </div>
+
+<script src="/vendors/quilljs/quill.min.js"></script>
+<script src="/js/main/home.js"></script>

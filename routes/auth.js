@@ -28,7 +28,10 @@ router.post("/sign-out", ensureAuth, (req, res) => {
 router.post(
     "/google",
     ensureGuest,
-    passport.authenticate("google", { scope: ["profile", "email"] })
+    passport.authenticate("google", {
+        scope: ["profile", "email"],
+        prompt: "select_account",
+    })
 );
 
 router.get(
@@ -36,7 +39,6 @@ router.get(
     ensureGuest,
     passport.authenticate("google", {
         failureRedirect: "/sign-in",
-        prompt: "select_account",
     }),
     function (req, res) {
         // Successful authentication, redirect home.
