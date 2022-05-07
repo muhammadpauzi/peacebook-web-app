@@ -2,16 +2,22 @@
     <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-2">
         <div>
             {{!-- create a post --}}
-            <div class="bg-white rounded-md p-5">
-                <h2 class="text-2xl block font-black text-slate-600 mb-4">Write a Post</h2>
+            <form id="form-create-post" class="bg-white rounded-md p-5">
+                <h2 class="text-2xl font-black text-slate-600 mb-4 flex items-center gap-1">
+                    <i class='bx bx-message-square-edit'></i> Write a Post
+                </h2>
+
                 <div class="mb-3">
                     <div id="post-editor"></div>
                 </div>
                 <div class="flex justify-end items-center">
                     <button
-                        class="py-2 px-6 bg-[#4169e1] text-white rounded flex items-center justify-center hover:bg-[#4169e1] focus:ring-[#4169e1] focus:ring-offset-2 transition focus:ring-2 font-semibold">Send</button>
+                        class="py-2 px-4 bg-[#4169e1] text-white rounded flex items-center justify-center hover:bg-[#3153b9] focus:ring-[#4169e1] focus:ring-offset-2 transition focus:ring-2 font-semibold gap-1"
+                        id="button-send">
+                        <i class='bx bx-send block transform rotate-[320deg]'></i> <span class="text">Send</span>
+                    </button>
                 </div>
-            </div>
+            </form>
             {{!-- end create a post --}}
         </div>
         <div class="hidden md:block">
@@ -20,4 +26,4 @@
 </div>
 
 <script src="/vendors/quilljs/quill.min.js"></script>
-<script src="/js/main/home.js"></script>
+<script type="module" src="/js/main/home.js"></script>

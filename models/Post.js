@@ -6,10 +6,9 @@ const dompurify = createDomPurify(window);
 
 const PostSchema = mongoose.Schema(
     {
-        body: {
+        content: {
             type: String,
             required: true,
-            unique: true,
         },
         author: {
             type: mongoose.Schema.Types.ObjectId,

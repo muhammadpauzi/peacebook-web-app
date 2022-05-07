@@ -1,4 +1,5 @@
 const { Response } = require("express");
+const { isDevelopment } = require("../utils/index.js");
 
 /**
  *
@@ -22,7 +23,7 @@ const successResponse = (res, data, statusCode = 200) => {
  * @returns -
  */
 const errorResponse = (res, error, statusCode = 500) => {
-    if (isDevelopment) console.log(error);
+    if (isDevelopment()) console.log(error);
     return res.status(statusCode).json({
         success: false,
         message: error.message || "",
