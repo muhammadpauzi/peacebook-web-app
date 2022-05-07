@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "start:dev": "nodemon index.js --config nodemon.json",
-    "tailwind:watch": "tailwindcss -c ./tailwind.config.cjs -i ./public/css/tailwind.input.css -o ./public/css/tailwind.output.css --watch"
+    "tailwind:watch": "tailwindcss -i ./public/css/tailwind.input.css -o ./public/css/tailwind.output.css --watch"
   },
   "dependencies": {
     "connect-flash": "^0.1.1",
