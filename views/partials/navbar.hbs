@@ -1,0 +1,28 @@
+<nav class="bg-white border-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between py-4">
+                <div class="flex items-center justify-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="/" class="w-28">
+                            <img src="/images/logo.png" alt="Peacebook's Logo">
+                        </a>
+                    </div>
+                    <div class="block ml-6">
+                        
+                    </div>
+                </div>
+                <div class="ml-3">
+                    {{#if user.isAuthenticated}}
+                    <div class="flex space-x-3">
+                        
+                    </div>
+                    {{else}}
+                    <div class="flex space-x-1">
+                        <a href="/sign-in"
+                            class="bg-[#4169e1] hover:bg-[#3258ca] text-white font-bold rounded py-2 px-5 block focus:ring-[#4169e1] focus:ring-offset-1 transition  focus:ring-1">Masuk</a>
+                    </div>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </nav>
