@@ -1,4 +1,4 @@
-const { HOME_TITLE } = require("../constants/title.js");
+const { HOME_TITLE } = require("../constants/titles.js");
 const {
     renderWithUserAndFlash,
 } = require("../helpers/renderWithUserAndFlash.js");

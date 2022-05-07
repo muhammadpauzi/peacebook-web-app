@@ -13,6 +13,7 @@ const { initPassport } = require("./configs/passport.js");
 // routes
 const authRoutes = require("./routes/auth.js");
 const homeRoutes = require("./routes/home.js");
+const postApiRoutes = require("./routes/api/posts.js");
 const { connectToMongoDB } = require("./configs/mongodb.js");
 const { getEnv } = require("./utils/index.js");
 
@@ -49,6 +50,7 @@ app.use(express.static("public"));
 
 // request body
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json({ limit: "20mb" }));
 
 // init passport (google strategy)
 initPassport(app);
@@ -59,6 +61,7 @@ initPassport(app);
 // init routes
 app.use("/", authRoutes);
 app.use("/", homeRoutes);
+app.use("/api/posts", postApiRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);

@@ -1,5 +1,7 @@
+const { isDevelopment } = require("../utils/index.js");
+
 const ensureAuth = (req, res, next) => {
-    if (req.isAuthenticated()) {
+    if (req.isAuthenticated() || isDevelopment()) {
         next();
     } else {
         res.redirect("/sign-in");
