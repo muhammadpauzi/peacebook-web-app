@@ -1,7 +1,8 @@
 const renderWithUserAndFlash = ({ req, res, title, path, data = {} }) => {
+    const user = req?.user?._doc;
     data.title = title;
     data.user = {
-        ...req.user,
+        ...user,
         isAuthenticated: req.isAuthenticated(),
     };
     data.errorMessage = req.flash("error");

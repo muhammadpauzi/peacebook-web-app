@@ -1,5 +1,5 @@
 const BASE = "Peacebook";
-const HOME_TITLE = `Beranda | ${BASE}`;
+const HOME_TITLE = `Home | ${BASE}`;
 
 module.exports = {
     BASE,

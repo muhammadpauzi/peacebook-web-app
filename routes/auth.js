@@ -34,7 +34,10 @@ router.post(
 router.get(
     "/google/callback",
     ensureGuest,
-    passport.authenticate("google", { failureRedirect: "/sign-in" }),
+    passport.authenticate("google", {
+        failureRedirect: "/sign-in",
+        prompt: "select_account",
+    }),
     function (req, res) {
         // Successful authentication, redirect home.
         req.flash(

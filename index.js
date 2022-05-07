@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
 const flash = require("connect-flash");
+const MongoStore = require("connect-mongo");
 
 dotenv.config();
 
@@ -32,9 +33,11 @@ app.set("view engine", ".hbs");
 // session
 app.use(
     session({
+        name: "peacebook-session-id",
         secret: getEnv("SECRET_SESSION", "xxx"),
         resave: false,
         saveUninitialized: false,
+        store: MongoStore.create({ mongoUrl: getEnv("MONGO_URI") }),
     })
 );
 

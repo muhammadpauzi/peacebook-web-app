@@ -4,6 +4,6 @@ const { ensureAuth, ensureGuest } = require("../middlewares/auth.js");
 
 const router = express.Router();
 
-router.get("/", ensureGuest, home);
+router.get("/", ensureAuth, home);
 
 module.exports = router;
